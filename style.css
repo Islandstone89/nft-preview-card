@@ -16,8 +16,8 @@
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -49,15 +49,15 @@ body {
     font-size: var(--fs--regular);
     font-weight: var(--fw--light);
     line-height: 1.6;
+    padding: 2rem 1rem;
 }
-
 
 
 .card {
     background-color: var(--clr--background-card);
     padding: 1.8rem 1.5rem;
     border-radius: 25px;
-    max-width: 40rem;
+    max-width: 25rem;
 }
 
 .image-main {
@@ -73,7 +73,7 @@ body {
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 
