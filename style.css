@@ -2,6 +2,7 @@
 :root {
     --clr--soft-blue: hsl(215, 51%, 70%);
     --clr--cyan: hsl(178, 100%, 50%);
+    --clr--cyan-opacity: hsla(178, 100%, 50%, 0.5);
 
     --clr--background-container: hsl(217, 54%, 11%);
     --clr--background-card: hsl(216, 50%, 16%);
@@ -57,7 +58,11 @@ body {
     background-color: var(--clr--background-card);
     padding: 1.8rem 1.5rem;
     border-radius: 25px;
-    max-width: 25rem;
+    max-width: 22rem;
+}
+
+.image-wrapper {
+    position: relative;
 }
 
 .image-main {
@@ -67,6 +72,29 @@ body {
 .image-main:hover {
     background-color: var(--clr--cyan);
     opacity: .5;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--clr--cyan-opacity);
+    display: none;
+}
+
+.image-overlay img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-wrapper:hover .image-overlay {
+    display: block;
+    cursor: pointer;
 }
 
 .content {
@@ -80,6 +108,7 @@ body {
 .heading {
     color: var(--clr--white);
     font-weight: var(--fw--semibold);
+    font-size: 1.5rem
 }
 
 .heading:where(:hover,:focus) {
@@ -91,8 +120,6 @@ body {
 .market {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid var(--clr--dark-blue);
-    padding-bottom: 1rem;
 }
 
 
@@ -116,6 +143,11 @@ body {
 
 .icon-clock {
     width: 1.6rem;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--clr--dark-blue);
 }
 
 .creator {
