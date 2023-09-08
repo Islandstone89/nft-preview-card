@@ -63,15 +63,8 @@ body {
 
 .image-wrapper {
     position: relative;
-}
-
-.image-main {
+    overflow: hidden;
     border-radius: 15px;
-}
-
-.image-main:hover {
-    background-color: var(--clr--cyan);
-    opacity: .5;
 }
 
 .image-overlay {
@@ -83,6 +76,7 @@ body {
     background-color: var(--clr--cyan-opacity);
     display: none;
 }
+
 
 .image-overlay img {
     position: absolute;
